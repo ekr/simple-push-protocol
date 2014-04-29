@@ -564,10 +564,10 @@ PushServer -&gt; UserAgent</h3>
 <dt>messageType = “register”</dt>
 <dd>
   registering
-channelID string (REQUIRED)
 </dd>
-<dt></dt>
-<dd>This MUST be the same as the channelID sent by the UserAgent in the register request that this message is a response to.
+<dt>channelID string (REQUIRED)</dt>
+<dd>
+  This MUST be the same as the channelID sent by the UserAgent in the register request that this message is a response to.
 </dd>
 <dt>status number (REQUIRED)</dt>
 <dd>
@@ -792,10 +792,12 @@ UserAgent -&gt; PushServer</h3>
 
 <p>It is RECOMMENDED that the UserAgent try to batch all pending acknowledgements into fewer messages.
 </p>
-<p>messageType =”ack”
-</p>
 <p></p>
 <blockquote class="text"><dl>
+<dt>messageType =”ack”</dt>
+<dd>
+  ack
+</dd>
 <dt>updates list</dt>
 <dd>
   The list contains one or more {“channelID”: channelID, “version”: N} pairs.
